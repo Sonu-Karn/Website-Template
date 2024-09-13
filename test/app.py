@@ -14,8 +14,8 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 # Email credentials and settings
-EMAIL_ADDRESS = 'tempnetworkbypass@gmail.com'  # Sender's email address
-EMAIL_PASSWORD = 'opkk dxyj ulrn hmsv'        # Email password (App-specific password)
+EMAIL_ADDRESS = 'example@gmail.com'  # Sender's email address
+EMAIL_PASSWORD = 'abcd efgh ijkl mnop'        # Email password (App-specific password)
 SMTP_SERVER = 'smtp.gmail.com'                # SMTP server for Gmail
 SENDER_NAME = 'Mero WebSite'                  # Name of the sender
 SMTP_PORT = 587                               # SMTP port for sending emails via Gmail
