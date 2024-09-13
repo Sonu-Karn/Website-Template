@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Blog Post</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .btn {
+    margin-top: 10px;
+}
+
+p {
+    font-size: 16px;
+}
+
+#logout {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+#logout:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Create a New Blog Post</h1>
+        <p>Welcome, Shree Karna! <a href="#" id="logout">Logout</a></p>
+        
+        <form>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter Title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea name="content" id="content" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control-file" id="image">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Initialize the CKEditor for the content textarea
+        CKEDITOR.replace('content');
+
+        // Logout functionality (example implementation)
+        document.getElementById('logout').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Logged out!');
+            // Redirect to login page or perform other logout actions
+        });
+    </script>
+</body>
+</html>
