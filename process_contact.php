@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Compose email message
-    $to = 'tempnetworkbypass@gmail.com'; // Replace with your email
+    $to = "example@gmail.com'; // Replace with your email
     $from = $email;
     $headers = "From: $from";
     $body = "Name: $name\n\nEmail: $email\n\nSubject: $subject\n\nMessage:\n$message";
